@@ -1,10 +1,22 @@
 
 
-
+//doesnt manipulate dom until page is fully rendered
 $(window).ready(function () {
-
+  //gets current time and displays it
   $("#currentDay").text(dayjs().format("MMMM DD YYYY, h:mm:ss A"));
 
+  //listener for saving user text to the time block
+  $(".saveBtn").on("click", function() {
+
+    //set variable for the user's input in the time block
+    let userTextInput = $(this).siblings(".description").val();
+    //set variable for time block
+    let blockId = $(this).parent().attr("id")
+
+    //moves input for each time block to local storage
+    localStorage.setItem(userTextInput, blockId);
+
+  });
 
 
 
@@ -34,5 +46,5 @@ $(window).ready(function () {
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
-  // TODO: Add code to display the current date in the header of the page.
+  
 });
