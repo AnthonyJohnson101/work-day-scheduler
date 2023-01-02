@@ -14,22 +14,30 @@ $(window).ready(function () {
     let blockId = $(this).parent().attr("id")
 
     //moves input for each time block to local storage
-    localStorage.setItem(userTextInput, blockId);
+    localStorage.setItem(blockId, userTextInput);
 
   });
 
   //pulls user text input from loacal storage and applies it to the time block
-  $("#hour-9 .description").val(localStorage.getItem("hour-9"))
-  $("#hour-10 .description").val(localStorage.getItem("hour-10"))
-  $("#hour-11 .description").val(localStorage.getItem("hour-11"))
-  $("#hour-12 .description").val(localStorage.getItem("hour-12"))
-  $("#hour-13 .description").val(localStorage.getItem("hour-13"))
-  $("#hour-14 .description").val(localStorage.getItem("hour-14"))
-  $("#hour-15 .description").val(localStorage.getItem("hour-15"))
-  $("#hour-16 .description").val(localStorage.getItem("hour-16"))
-  $("#hour-17 .description").val(localStorage.getItem("hour-18"))
+  $("#hour-9 .description").val(localStorage.getItem("hour-9"));
+  $("#hour-10 .description").val(localStorage.getItem("hour-10"));
+  $("#hour-11 .description").val(localStorage.getItem("hour-11"));
+  $("#hour-12 .description").val(localStorage.getItem("hour-12"));
+  $("#hour-13 .description").val(localStorage.getItem("hour-13"));
+  $("#hour-14 .description").val(localStorage.getItem("hour-14"));
+  $("#hour-15 .description").val(localStorage.getItem("hour-15"));
+  $("#hour-16 .description").val(localStorage.getItem("hour-16"));
+  $("#hour-17 .description").val(localStorage.getItem("hour-18"));
 
-  //need to create something to track the current hour
+
+  //sets hour = to current time for looping
+  function timeTracker () {
+    let hour = dayjs().hour()
+
+
+
+
+  }
 
   //need to create something to loop through time block checking against current hour
   //and apply colors with past, present, future classes
