@@ -1,5 +1,3 @@
-
-
 //doesnt manipulate dom until page is fully rendered
 $(window).ready(function () {
   //gets current time and displays it
@@ -29,10 +27,23 @@ $(window).ready(function () {
   $("#hour-16 .description").val(localStorage.getItem("hour-16"))
   $("#hour-17 .description").val(localStorage.getItem("hour-18"))
 
-  //need to create something to track the current hour
+  //changes color based on current time
+  function displayColor () {
+    let now = dayjs().format('HH');
+    let timeBlocks = [9, 10, 11, 12, 13, 14, 15, 16, 17]
+    for (let i=0; i < timeBlocks.length; i++){
+      if (timeBlocks[i] > now) {
+        $(`#hour-${timeBlocks[i]}`).addClass('future');
+      }
+      if (timeBlocks[i] == now) {
+        $(`#hour-${timeBlocks[i]}`).addClass('present');
+      }
+      if (timeBlocks[i] < now) {
+        $(`#hour-${timeBlocks[i]}`).addClass('past');
+      }
 
-  //need to create something to loop through time block checking against current hour
-  //and apply colors with past, present, future classes
-  
- 
+    }};
+
+    displayColor();
+   
 });
