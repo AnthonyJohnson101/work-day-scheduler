@@ -14,7 +14,7 @@ $(window).ready(function () {
     let blockId = $(this).parent().attr("id")
 
     //moves input for each time block to local storage
-    localStorage.setItem(userTextInput, blockId);
+    localStorage.setItem(blockId, userTextInput);
 
   });
 
