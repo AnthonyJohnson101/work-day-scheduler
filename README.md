@@ -9,8 +9,9 @@ N/A
 
 ## Usage
 
-Plan your day by filling the boxes with text and saving them, the past (gray), present (green), and future (red) will be color coded to help you stay on schedule
+Plan your day by filling the boxes with text and saving them, the past (gray), present (red), and future (green) will be color coded to help you stay on schedule
 
+![image](https://user-images.githubusercontent.com/116526152/210303611-12de4abc-2740-4da8-aa16-1fae62287650.png)
 
 ## Credits
 
